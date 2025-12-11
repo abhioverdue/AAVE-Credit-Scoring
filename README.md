@@ -1,9 +1,9 @@
 # 🏦 Aave V2 Wallet Credit Scoring
 
-## 📊 Overview
+## Overview
 This project implements a comprehensive wallet-level credit scoring system for users interacting with the **Aave V2 Protocol**. It analyzes transaction histories, extracts behavioral features, and assigns credit scores (0-1000) based on risk assessment and usage patterns.
 
-## 🛠️ Project Structure
+## Project Structure
 
 ```
 aave-credit-scoring/
@@ -26,15 +26,15 @@ aave-credit-scoring/
 └── requirements.txt                  # Python dependencies
 ```
 
-## 🔥 Methodology
+## Methodology
 
-### 1️⃣ Data Processing (`src/data_processing.py`)
+### Data Processing (`src/data_processing.py`)
 - Loads user transaction logs from **JSON format**
 - Normalizes data structures, handling missing values and standardizing formats
 - Validates transaction data integrity and consistency
 - Prepares clean dataset for feature extraction
 
-### 2️⃣ Feature Engineering (`src/feature_engineering.py`)
+### Feature Engineering (`src/feature_engineering.py`)
 Extracts comprehensive wallet-level behavioral features:
 - **Transaction Volume**: Total deposits, total redeems, net position
 - **Behavioral Ratios**: Deposit/redeem ratio, transaction frequency patterns
@@ -42,7 +42,7 @@ Extracts comprehensive wallet-level behavioral features:
 - **Risk Indicators**: Average transaction size, holding duration patterns
 - **Market Behavior**: Reaction to volatility, timing patterns
 
-### 3️⃣ Scoring Model (`src/scoring_model.py`)
+### Scoring Model (`src/scoring_model.py`)
 Implements a **rule-based heuristic scoring algorithm** (0-1000 scale) considering:
 - **Deposit/Redeem Ratio** (Primary factor): Rewards sustainable usage patterns
 - **Transaction Frequency**: Balances activity vs potential exploitation
@@ -50,19 +50,19 @@ Implements a **rule-based heuristic scoring algorithm** (0-1000 scale) consideri
 - **Holding Duration**: Favors long-term vs extractive behavior
 - **Market Reaction**: Penalizes panic-driven or exploitative actions
 
-### 4️⃣ Exploratory Data Analysis (`notebooks/EDA_and_Feature_Analysis.ipynb`)
+### Exploratory Data Analysis (`notebooks/EDA_and_Feature_Analysis.ipynb`)
 - Comprehensive analysis of transaction patterns and wallet behaviors
 - Visualization of risk distributions and behavioral anomalies
 - Statistical validation of scoring algorithm effectiveness
 - Feature importance analysis and correlation studies
 
-### 5️⃣ Score Analysis & Reporting (`analysis/generate_analysis.py`)
+### Score Analysis & Reporting (`analysis/generate_analysis.py`)
 - Generates detailed statistical summaries and score distributions
 - Identifies behavioral patterns across different risk groups
 - Produces actionable insights for protocol optimization
 - Creates comprehensive analysis report in `analysis.md`
 
-## 🚀 How to Run
+## How to Run
 
 ### Prerequisites
 - Python 3.8+
@@ -109,7 +109,7 @@ Based on analysis of **3,497 wallets**:
 - **Perfect correlation** between low scores and limited asset diversification
 - **Clear behavioral differentiation** across all score ranges
 
-## 🔍 Key Features
+## Key Features
 
 ### Behavioral Archetypes Identified
 1. **Extractors (0-200)**: Pure redemption patterns, high frequency, limited assets
@@ -124,21 +124,21 @@ Based on analysis of **3,497 wallets**:
 - **Dynamic Pricing**: Risk-based fee structures and incentive programs
 - **Protocol Optimization**: Data-driven improvements to user experience
 
-## 🛡️ Algorithm Performance
+## Algorithm Performance
 
 - **Risk Detection**: 100% correlation with problematic behaviors
 - **Score Distribution**: Natural bell curve indicating proper calibration
 - **Behavioral Consistency**: Clear patterns within each score range
 - **Predictive Power**: Strong correlation between scores and risk indicators
 
-## 📚 Technical Stack
+## Technical Stack
 
 - **Data Processing**: pandas, numpy
 - **Analysis**: scikit-learn, matplotlib, seaborn
 - **Scoring**: Custom rule-based algorithm
 - **Visualization**: Jupyter notebooks with comprehensive EDA
 
-## 🎯 Business Impact
+## Business Impact
 
 ### Immediate Applications
 - **Risk Management**: Real-time identification of extractive behavior
@@ -150,27 +150,19 @@ Based on analysis of **3,497 wallets**:
 - **Diversification Incentives**: Opportunities to encourage multi-asset usage
 - **Premium Tiers**: Clear segmentation for enhanced service offerings
 
-## 📝 Future Enhancements
+## Future Enhancements
 
 - **Machine Learning Integration**: Evolution from rule-based to ML-based scoring
 - **Real-time Scoring**: Live score updates with transaction streams
 - **Cross-Protocol Analysis**: Expansion beyond Aave V2 to entire DeFi ecosystem
 - **Predictive Modeling**: Score-based prediction of future user behavior
 
-## 📚 References
+## References
 
 - DeFi Risk Assessment Literature
 - Behavioral Finance in Cryptocurrency Markets
 - Credit Scoring Methodologies in Traditional Finance
 
-## 📄 License
+## License
 
 MIT License - Feel free to use, modify, and distribute!
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for any suggestions or improvements.
-
----
-
-*This scoring system successfully identifies distinct behavioral patterns across the DeFi user spectrum, providing actionable insights for protocol optimization and risk management.*
